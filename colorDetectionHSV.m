@@ -1,4 +1,4 @@
-function [team, teamSize] = colorDetectionHSV(img, color, minBlobSize)
+function [team, teamSize, maskedRGBImage] = colorDetectionHSV(img, color, minBlobSize)
     rgbImage = im2double(img);
    
     % Convert RGB image to HSV
@@ -51,7 +51,7 @@ function [team, teamSize] = colorDetectionHSV(img, color, minBlobSize)
     
     % Concatenate the masked color bands to form the rgb image.
 	maskedRGBImage = cat(3, maskedImageR, maskedImageG, maskedImageB);
-    
+%     imshow(maskedRGBImage);
     [team, teamSize] = FindConnectedComponents(coloredObjectsMask);
 end
 

@@ -10,12 +10,12 @@ function [hueThresholdLow, hueThresholdHigh, saturationThresholdLow, saturationT
 			valueThresholdHigh = 1.0;
 		case 'green'
 			% Green
-			hueThresholdLow = 0.15;
-			hueThresholdHigh = 0.60;
-			saturationThresholdLow = 0.36;
+			hueThresholdLow = 0.192;
+			hueThresholdHigh = 0.291;
+			saturationThresholdLow = 0.587;
 			saturationThresholdHigh = 1;
-			valueThresholdLow = 0;
-			valueThresholdHigh = 0.8;
+			valueThresholdLow = 0.151;
+			valueThresholdHigh = 0.657;
 		case 'red'
 			% Red.
 			% actually cyan, the image will be inverted and checked for
